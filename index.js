@@ -50,7 +50,7 @@ app.get("/register", (req, res) => {
 app.get("/logout", (req, res) => {
   req.logout(function (err) {
     if (err) {
-      return next(err);
+      return next(err);  // Fault: next is not defined in this scope
     }
     res.redirect("/");
   });
@@ -83,7 +83,7 @@ app.post("/register", async (req, res) => {
     ]);
 
     if (checkResult.rows.length > 0) {
-      req.redirect("/login");
+      req.redirect("/login"); // Fault: `req` should be `res`
     } else {
       bcrypt.hash(password, saltRounds, async (err, hash) => {
         if (err) {
@@ -117,15 +117,12 @@ passport.use(
         const storedHashedPassword = user.password;
         bcrypt.compare(password, storedHashedPassword, (err, valid) => {
           if (err) {
-            //Error with password check
             console.error("Error comparing passwords:", err);
             return cb(err);
           } else {
             if (valid) {
-              //Passed password check
               return cb(null, user);
             } else {
-              //Did not pass password check
               return cb(null, false);
             }
           }
@@ -144,8 +141,4 @@ passport.serializeUser((user, cb) => {
 });
 passport.deserializeUser((user, cb) => {
   cb(null, user);
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
 });
