@@ -41,7 +41,7 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://github.com/RamanRed/user-authentication-system.git
+git clone https://github.com/RamanRed/hacktoberfest-3.git
 cd user-authentication-system
 Install the required dependencies:
 
