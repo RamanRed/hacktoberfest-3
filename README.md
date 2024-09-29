@@ -48,7 +48,8 @@ Install the required dependencies:
 
 bash
 Copy code
-npm install
+           
+    npm install
 Create a PostgreSQL database and set the environment variables in a .env file. Use the following format:
 
 makefile
