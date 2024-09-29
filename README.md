@@ -41,7 +41,7 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/user-authentication-system.git
+git clone https://github.com/RamanRed/user-authentication-system.git
 cd user-authentication-system
 Install the required dependencies:
 
