@@ -67,7 +67,7 @@ When working on your solution, keep the following concepts in mind:
 
    ```bash
    git clone https://github.com/RamanRed/hacktoberfest-3.git
-   cd user-authentication-system
+
    ```
 
 2. **Install the required dependencies**:
