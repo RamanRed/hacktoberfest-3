@@ -98,5 +98,3 @@ When working on your solution, keep the following concepts in mind:
 Explore the application by **registering a new user** and **logging in** to see how the authentication system works!
 
 ---
-
-This reformatted version should improve readability and organization. Let me know if you need any further changes!
